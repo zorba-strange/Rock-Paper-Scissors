@@ -1,4 +1,4 @@
-//object that hold each players move
+//hold each players move
 var playersMoves = {};
 
 //get user move. I have commented out the fucntion because prompt doesn't work on my editor.
