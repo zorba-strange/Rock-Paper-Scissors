@@ -1,10 +1,8 @@
-//does anything go at the top of js scripts?
-//opening message introduction the game
+
 //gets the users choice
 /*var userChoice = prompt("Do you choose rock, paper, or scissors?");*/
-//store each players choice in a
+var userChoice = "paper";
 
-var userChoice = "paper"
 //get the computers choice
 function computerChoice() {
   var computerPick = Math.random();
@@ -13,11 +11,11 @@ function computerChoice() {
   } else if (computerPick >= 0.34 && computerPick <= 0.66) {
     return "paper";
   } else {
-    return "scissors"
+    return "scissors";
   }
 };
 
-function compare(user, computer) {
+function getWinner(user, computer) {
   //check for tie
   if (user === computer) {
     return "tie";
@@ -50,7 +48,7 @@ function game() {
   //contiune playing the game until someone gets to five wins
   while (true) {
     //checking to see who won each round
-    var winner = compare(userChoice, computerChoice());
+    var winner = getWinner(userChoice, computerChoice());
     //checks to see if someone has five wins
     if (userWins === 5 || computerWins === 5) {
       break;
