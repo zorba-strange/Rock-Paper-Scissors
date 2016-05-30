@@ -87,5 +87,5 @@ function game() {
   //print of the winner of the game
   console.log("The Winner of the game is the " + gameWinner);
 };
-
+//play the game
 game();
